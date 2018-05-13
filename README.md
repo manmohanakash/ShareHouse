@@ -5,14 +5,16 @@ An Android app to share a family owned vacation house and makes sure that every 
 
 Prerequisites
 
-You would need to install the following list of software in your system.
-    Java 8
-    Maven
-    Eclipse IDE
-    Android Studio
-    Git
-    Tortoise Git (Optional)
-    MySQL
+You would need to install the following list of software in your system
+
+Java 7
+Maven
+Eclipse IDE (Mars+)
+Android Studio
+Git
+Tortoise Git (Optional)
+MySQL
+
 
 
 Deployment
