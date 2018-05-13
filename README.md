@@ -7,14 +7,7 @@ Prerequisites
 
 You would need to install the following list of software in your system
 
-Java 7
-Maven
-Eclipse IDE (Mars+)
-Android Studio
-Git
-Tortoise Git (Optional)
-MySQL
-
+Java 7, Maven, Eclipse IDE (Mars+), Android Studio, Git, Tortoise Git (Optional), MySQL
 
 
 Deployment
