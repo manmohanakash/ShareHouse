@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewHouse">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_toolbar"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <ImageButton
+            android:id="@+id/home_icon"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="13dp"
+            android:background="@color/app_toolbar"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_icon"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="15dp" />
+
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/home_icon"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/holder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/app_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/houseView_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="HouseName"
+                    android:textColor="@color/app_text"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    app:fontFamily="cursive"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/houseView_image"
+                    android:layout_width="0dp"
+                    android:layout_height="250dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@mipmap/defaulthouse"
+                    app:fontFamily="casual"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/houseView_name" />
+
+
+                <TextView
+                    android:id="@+id/view_houseno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="20dp"
+                    android:text="House no"
+                    android:textColor="@color/app_text"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-smallcaps"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/houseView_image" />
+
+                <TextView
+                    android:id="@+id/houseView_no"
+                    android:layout_width="214dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/app_text"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/view_houseno"
+                    app:layout_constraintTop_toTopOf="@+id/view_houseno" />
+
+                <TextView
+                    android:id="@+id/view_street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Street"
+                    android:textColor="@color/app_text"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-smallcaps"
+                    app:layout_constraintEnd_toEndOf="@+id/view_houseno"
+                    app:layout_constraintTop_toBottomOf="@+id/houseView_no" />
+
+                <TextView
+                    android:id="@+id/houseView_street"
+                    android:layout_width="214dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_text"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/houseView_no"
+                    app:layout_constraintTop_toTopOf="@+id/view_street" />
+
+                <TextView
+                    android:id="@+id/view_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="City"
+                    android:textColor="@color/app_text"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-smallcaps"
+                    app:layout_constraintEnd_toEndOf="@+id/view_street"
+                    app:layout_constraintTop_toBottomOf="@+id/houseView_street" />
+
+                <TextView
+                    android:id="@+id/houseView_city"
+                    android:layout_width="214dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_text"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/houseView_street"
+                    app:layout_constraintTop_toTopOf="@+id/view_city" />
+
+                <TextView
+                    android:id="@+id/view_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="State"
+                    android:textColor="@color/app_text"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-smallcaps"
+                    app:layout_constraintEnd_toEndOf="@+id/view_city"
+                    app:layout_constraintTop_toBottomOf="@+id/houseView_city" />
+
+                <TextView
+                    android:id="@+id/houseView_state"
+                    android:layout_width="214dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_text"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/houseView_city"
+                    app:layout_constraintTop_toTopOf="@+id/view_state" />
+
+                <TextView
+                    android:id="@+id/view_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Country"
+                    android:textColor="@color/app_text"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-smallcaps"
+                    app:layout_constraintEnd_toEndOf="@+id/view_state"
+                    app:layout_constraintTop_toBottomOf="@+id/houseView_state" />
+
+
+                <TextView
+                    android:id="@+id/houseView_country"
+                    android:layout_width="214dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_text"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/houseView_state"
+                    app:layout_constraintTop_toTopOf="@+id/view_country" />
+
+                <TextView
+                    android:id="@+id/view_landmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Landmark"
+                    android:textColor="@color/app_text"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-smallcaps"
+                    app:layout_constraintEnd_toEndOf="@+id/view_country"
+                    app:layout_constraintTop_toBottomOf="@+id/houseView_country" />
+
+                <TextView
+                    android:id="@+id/houseView_landmark"
+                    android:layout_width="214dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_text"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/houseView_country"
+                    app:layout_constraintTop_toTopOf="@+id/view_landmark" />
+
+                <TextView
+                    android:id="@+id/view_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Description"
+                    android:textColor="@color/app_text"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-smallcaps"
+                    app:layout_constraintEnd_toEndOf="@+id/view_landmark"
+                    app:layout_constraintTop_toBottomOf="@+id/houseView_landmark" />
+
+                <TextView
+                    android:id="@+id/houseView_description"
+                    android:layout_width="214dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_text"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/houseView_landmark"
+                    app:layout_constraintTop_toTopOf="@+id/view_description" />
+
+
+                <TextView
+                    android:id="@+id/view_maxweeks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Max Weeks"
+                    android:textColor="@color/app_text"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-smallcaps"
+                    app:layout_constraintEnd_toEndOf="@+id/view_description"
+                    app:layout_constraintTop_toBottomOf="@+id/houseView_description" />
+
+                <TextView
+                    android:id="@+id/houseview_maxweeks"
+                    android:layout_width="214dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_text"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/houseView_description"
+                    app:layout_constraintTop_toTopOf="@+id/view_maxweeks" />
+
+
+                <TextView
+                    android:id="@+id/view_weeklyrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Weekly Rate"
+                    android:textColor="@color/app_text"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-smallcaps"
+                    app:layout_constraintEnd_toEndOf="@+id/view_maxweeks"
+                    app:layout_constraintTop_toBottomOf="@+id/houseview_maxweeks" />
+
+                <TextView
+                    android:id="@+id/houseview_weeklyrate"
+                    android:layout_width="214dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_text"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/houseview_maxweeks"
+                    app:layout_constraintTop_toTopOf="@+id/view_weeklyrate" />
+
+                <TextView
+                    android:id="@+id/view_shareby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Shared by"
+                    android:textColor="@color/app_text"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:fontFamily="sans-serif-smallcaps"
+                    app:layout_constraintEnd_toEndOf="@+id/view_weeklyrate"
+                    app:layout_constraintTop_toBottomOf="@+id/houseview_weeklyrate" />
+
+
+                <TextView
+                    android:id="@+id/houseview_shareby"
+                    android:layout_width="214dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_text"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/houseview_weeklyrate"
+                    app:layout_constraintTop_toTopOf="@+id/view_shareby" />
+
+
+                <fragment
+                    android:id="@+id/map"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="320dp"
+                    android:layout_height="320dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="100dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/houseview_maxweeks" />
+
+
+
+
+
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

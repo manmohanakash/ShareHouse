@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Settings">
+        <menu>
+
+            <item
+                android:id="@+id/nav_edit_profile"
+                android:icon="@drawable/profile_image"
+                android:title="Edit Profile" />
+
+            <item
+                android:id="@+id/nav_edit_house"
+                android:icon="@drawable/edit_house"
+                android:title="Edit House" />
+
+            <item
+                android:id="@+id/nav_payment"
+                android:icon="@drawable/money_image"
+                android:title="My Payments" />
+
+            <item
+                android:id="@+id/nav_change_password"
+                android:icon="@drawable/change_password"
+                android:title="Change Password" />
+
+
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/about_image"
+                android:title="About" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:title="Logout" />
+        </menu>
+
+    </item>
+</menu>

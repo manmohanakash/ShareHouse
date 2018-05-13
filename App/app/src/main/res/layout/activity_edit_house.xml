@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditHouse">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_toolbar"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <ImageButton
+            android:id="@+id/home_icon"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:background="@color/app_toolbar"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_icon"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="15dp" />
+
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/home_icon"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/app_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/view_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/view_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:text="House name"
+                android:textColor="@color/app_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_title" />
+
+            <TextView
+                android:id="@+id/view_houseno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="House no"
+                android:textColor="@color/app_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/view_name"
+                app:layout_constraintTop_toBottomOf="@+id/input_name" />
+
+            <TextView
+                android:id="@+id/view_street"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Street"
+                android:textColor="@color/app_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/view_houseno"
+                app:layout_constraintTop_toBottomOf="@+id/input_no" />
+
+            <TextView
+                android:id="@+id/view_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="City"
+                android:textColor="@color/app_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/view_street"
+                app:layout_constraintTop_toBottomOf="@+id/input_street" />
+
+            <TextView
+                android:id="@+id/view_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="State"
+                android:textColor="@color/app_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/view_city"
+                app:layout_constraintTop_toBottomOf="@+id/input_city" />
+
+            <TextView
+                android:id="@+id/view_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Country"
+                android:textColor="@color/app_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/view_state"
+                app:layout_constraintTop_toBottomOf="@+id/input_state" />
+
+            <TextView
+                android:id="@+id/view_landmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Landmark"
+                android:textColor="@color/app_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/view_country"
+                app:layout_constraintTop_toBottomOf="@+id/input_country" />
+
+            <TextView
+                android:id="@+id/view_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Description"
+                android:textColor="@color/app_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/view_landmark"
+                app:layout_constraintTop_toBottomOf="@+id/input_landmark" />
+
+
+            <TextView
+                android:id="@+id/view_sharedby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shared By"
+                android:textColor="@color/app_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/weekRate"
+                app:layout_constraintTop_toBottomOf="@+id/imageRef" />
+
+            <TextView
+                android:id="@+id/maxWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Max Weeks"
+                android:textColor="@color/app_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/view_description"
+                app:layout_constraintTop_toBottomOf="@+id/input_description" />
+
+            <TextView
+                android:id="@+id/view_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="EDIT HOUSE"
+                android:textColor="@color/app_text"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/input_no"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/input_name"
+                app:layout_constraintTop_toTopOf="@+id/view_houseno" />
+
+            <EditText
+                android:id="@+id/input_street"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/input_no"
+                app:layout_constraintTop_toTopOf="@+id/view_street" />
+
+            <EditText
+                android:id="@+id/input_city"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/input_street"
+                app:layout_constraintTop_toTopOf="@+id/view_city" />
+
+            <EditText
+                android:id="@+id/input_state"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/input_city"
+                app:layout_constraintTop_toTopOf="@+id/view_state" />
+
+            <EditText
+                android:id="@+id/input_country"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/input_state"
+                app:layout_constraintTop_toTopOf="@+id/view_country" />
+
+            <EditText
+                android:id="@+id/input_landmark"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/input_country"
+                app:layout_constraintTop_toTopOf="@+id/view_landmark" />
+
+            <EditText
+                android:id="@+id/input_description"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/input_landmark"
+                app:layout_constraintTop_toTopOf="@+id/view_description" />
+
+
+            <EditText
+                android:id="@+id/input_name"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:background="@color/edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                app:layout_constraintStart_toEndOf="@+id/view_name"
+                app:layout_constraintTop_toTopOf="@+id/view_name" />
+
+            <EditText
+                android:id="@+id/input_sharedby"
+                android:layout_width="267dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.123"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_sharedby" />
+
+            <ImageButton
+                android:id="@+id/addshared_button"
+                android:layout_width="38dp"
+                android:layout_height="31dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/add_icon"
+                app:layout_constraintStart_toEndOf="@+id/input_sharedby"
+                app:layout_constraintTop_toTopOf="@+id/input_sharedby" />
+
+
+            <com.akash.sharehouse.NonScrollListView
+                android:id="@id/android:list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/input_sharedby"></com.akash.sharehouse.NonScrollListView>
+
+            <Button
+                android:id="@+id/update_house"
+                android:layout_width="152dp"
+                android:layout_height="47dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/app_text"
+                android:text="UPDATE"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.425"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/android:list" />
+
+            <TextView
+                android:id="@+id/weekRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Weekly Rate"
+                android:textColor="@color/app_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/maxWeek"
+                app:layout_constraintTop_toBottomOf="@+id/input_maxWeeks" />
+
+            <EditText
+                android:id="@+id/input_maxWeeks"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/edit_text"
+                android:ems="10"
+                android:inputType="number"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/input_description"
+                app:layout_constraintTop_toTopOf="@+id/maxWeek" />
+
+            <EditText
+                android:id="@+id/input_weekRate"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/edit_text"
+                android:ems="10"
+                android:inputType="number"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/input_maxWeeks"
+                app:layout_constraintTop_toTopOf="@+id/weekRate" />
+
+
+            <Button
+                android:id="@+id/input_button_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/app_text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="OPEN GALLERY"
+                app:layout_constraintStart_toStartOf="@+id/input_weekRate"
+                app:layout_constraintTop_toTopOf="@+id/view_image" />
+
+            <ImageView
+                android:id="@+id/imageRef"
+                android:layout_width="105dp"
+                android:layout_height="73dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@mipmap/defaulthouse"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.578"
+                app:layout_constraintStart_toEndOf="@+id/input_button_photo"
+                app:layout_constraintTop_toBottomOf="@+id/input_weekRate" />
+
+            <TextView
+                android:id="@+id/view_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Image"
+                android:textColor="@color/app_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/weekRate"
+                app:layout_constraintTop_toBottomOf="@+id/input_weekRate" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,70 @@
+===================================================================================
+USER
+===================================================================================
+
+CREATE TABLE User (
+UserID INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+UserName varchar(50) NOT NULL UNIQUE,
+FirstName varchar(50) DEFAULT NULL,
+LastName varchar(50) DEFAULT NULL,
+Email varchar(50) NOT NULL UNIQUE,
+Password varchar(257) NOT NULL,
+DeviceID varchar(50) DEFAULT NULL
+); 
+
+===================================================================================
+HOUSE
+===================================================================================
+
+CREATE TABLE House(
+HouseID INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+HouseName varchar(50) DEFAULT NULL,
+HouseNo varchar(50) DEFAULT NULL,
+HouseStreet varchar(50) DEFAULT NULL,
+HouseCity varchar(50) DEFAULT NULL,
+HouseState varchar(50) DEFAULT NULL,
+HouseCountry varchar(50) DEFAULT NULL,
+Landmark varchar(50) DEFAULT NULL,
+HouseImg varchar(250) DEFAULT NULL,
+Description varchar(50) DEFAULT NULL,
+MapX varchar(50) DEFAULT NULL,
+MapY varchar(50) DEFAULT NULL,
+MaxWeeks INT(10) DEFAULT NULL,
+WeekRate INT(10) DEFAULT NULL,
+SharedCounter INT(10));
+
+===================================================================================
+SHARED BY
+===================================================================================
+
+CREATE TABLE SharedBy(
+SharedID INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+UserID INT(11) NOT NULL,
+HouseID INT(11) NOT NULL,
+IsAdmin INT(10)
+);
+
+===================================================================================
+Bookings
+===================================================================================
+
+CREATE TABLE Booking(
+BookingID INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+HouseID INT(11) NOT NULL,
+UserID INT(11) NOT NULL,
+BookingWeek INT(11) NOT NULL
+);
+
+===================================================================================
+PAYMENTS
+===================================================================================
+
+CREATE TABLE Payment(
+PaymentID INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+BookingID INT(11) NOT NULL,
+UserID1 INT(11) NOT NULL,
+UserID2 INT(11) NOT NULL,
+Amount INT(11) NOT NULL
+);
+
+
