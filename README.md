@@ -10,18 +10,6 @@ You would need to install the following list of software in your system
 Java 7, Maven, Eclipse IDE (Mars+), Android Studio, Git, Tortoise Git (Optional), MySQL
 
 
-Deployment
-
-    Step 1 - Maven Build of the Server
-
-Navigate to src/Server/MavAdvise and run the following in the command line
-
-	mvn clean install
-
-This will generate the WAR file in the src/Server/MavAdvise/target folder, which can be deployed in Tomcat server
-
-    Step 2 - Run the Android App
-
 Built With
 
     Android SDK - Android SDK
